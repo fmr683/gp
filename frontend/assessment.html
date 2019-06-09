@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Assessment-Fazlul</title>
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="assets/css/custom.css">
+	</head>
+	
+	<body>
+		<div class="jumbotron text-center">
+		  <h1>Assessment - Fazlul</h1> 
+		</div>
+	  
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+
+					<div id="login-wrapper" class="login-form">
+						<div id="error"></div>
+						<form id="login-form" method="post">
+							<h2 class="text-center">Log in</h2>       
+							<div class="form-group">
+								<input type="text" name="email" class="form-control" placeholder="Username" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" class="form-control" placeholder="Password" required="required">
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-block">Log in</button>
+							</div>     
+						</form>
+					</div>
+
+					<div id="chart-wrapper">
+						<a href="javascript:;" id="logout">Logout</a>
+						<div id="chart"></div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	<!-- Vendor -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/highcharts/js/highcharts.js"></script>
+	<script src="assets/vendor/highcharts/modules/series-label.js"></script>
+	<script src="assets/vendor/highcharts/modules/exporting.js"></script>
+	<script src="assets/vendor/highcharts/modules/export-data.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="assets/js/custom.js"></script>
+	</body>
+</html>

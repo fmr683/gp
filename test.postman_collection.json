@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "ada2e0d8-b6f8-41e9-bb7b-da61674d859a",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost/assessment/public/v1.0/user/flow/count/weekly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/assessment/public/v1.0/user/flow/count/weekly",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment",
+						"public",
+						"v1.0",
+						"user",
+						"flow",
+						"count",
+						"weekly"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
