@@ -33,6 +33,7 @@ PHP application to demostrasrate the site user flow in Highcharts chart.
 - Run the `php -S localhost:8000 -t public`.
 - Go back to root directory and navigate to `frontend` directory .
 - Open the `assessment.html` html file.
+- Note: in the login page demo accounts will be displayed.
 
 ## Features
 - User login/logout.
