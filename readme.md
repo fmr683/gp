@@ -1,6 +1,6 @@
 # Temper Onboarding Flow
 
-PHP application to demostrasrate the site user flow in Retention Curve chart.
+PHP application to demostrasrate the site user flow in Highcharts chart.
 
 ## Table of Contents 
 
@@ -35,7 +35,7 @@ PHP application to demostrasrate the site user flow in Retention Curve chart.
 
 ## Features
 - User login/logout.
-- Displaying the user flow statistics in the Retention Curve chart.
+- Displaying the user flow statistics in the Highcharts chart.
 
 ## Security
 - JWT token 
