@@ -24,3 +24,4 @@
 #login-wrapper, #chart-wrapper { display: none  }
 .highcharts-exporting-group { display: none !important; }
 #logout { float: right;}
+#chart { overflow: inherit !important; }
