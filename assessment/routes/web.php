@@ -25,8 +25,11 @@ $router->group(['prefix' => 'v1'], function () use ($router) {
         ]
     );
 
-$router->group(['prefix' => 'user'/*, 'middleware' => 'jwt.auth'*/], function () use ($router) {
+    $router->group(['prefix' => 'user-flow', 'middleware' => 'jwt.auth'], function () use ($router) {
 
-        $router->get('/flow/count/weekly', 'UserController@flowCountWeekly');
+        $router->get('/flow/count/weekly', 'UserFlowController@flowCountWeekly');
     });
 });
+
+// Demo Users to login
+$router->get('/users/list', 'UserController@list');
