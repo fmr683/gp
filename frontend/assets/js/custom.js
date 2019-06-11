@@ -1,8 +1,11 @@
+const domain = "http://localhost:8000/";
+
+
 $("document").ready(function(){
 
-
     var localToken = getToken();
-    const domain = "http://localhost:8000/";
+    
+    demoUsers();
 
     if (localToken) {
         chartForm(localToken);
@@ -19,7 +22,6 @@ $("document").ready(function(){
     $("#login-form").submit(function() {
 
         $.post(domain + "v1/auth/login", $("#login-form").serialize())
-        // Serialization looks good: name=textInNameInput&&telefon=textInPhoneInput etc
         .done(function(data) {
 
             localStorage.setItem("token", data.token); // set the token
@@ -37,6 +39,27 @@ $("document").ready(function(){
 
 });
 
+
+// get demo users 
+function demoUsers() {
+
+    $.get(domain + "/users/list")
+    .done(function(data) {
+
+        $.each(data, function(key, val) {
+            $("#sampleUsers").append("Email: " + val[0].email+ " <br/> Password: 12345");
+            return true;
+        });
+    })
+    .fail(function () {
+
+        alert("No User data found in the db")
+    });
+
+}
+
+
+// login errors
 function loginErrors(error) {
 
     if (error.error !== undefined) return error.error;
@@ -71,11 +94,12 @@ function showLogin () {
     $("#chart-wrapper").hide();
 }
 
+// chart data
 function chartForm (token) {
 
     $.ajax({
         type: 'GET',
-        url: domain + 'v1/user/flow/count/weekly',
+        url: domain + 'v1/user-flow/flow/count/weekly',
         dataType: "json",
         headers: {
             "Authorization": "Bearer " + token
@@ -98,6 +122,10 @@ function lineChart(series) {
             text: 'Weekly Retention Curve'
         },
 
+        xAxis: {
+			categories:
+				['0', '20', '40', '50', '70', '90', '99', '100']
+		},
         yAxis: {
             title: {
                 text: 'Percentage of Users'

@@ -14,6 +14,6 @@
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'email' => $faker->unique()->email,
-        'password' => app('hash')->make('12345'),
+        'password' => app('hash')->make(env('TEMP_PASSWORD')),
     ];
 });
