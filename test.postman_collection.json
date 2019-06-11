@@ -1,25 +1,74 @@
 {
 	"info": {
-		"_postman_id": "ada2e0d8-b6f8-41e9-bb7b-da61674d859a",
-		"name": "test",
+		"_postman_id": "9459596e-2c81-417f-8a5c-a9a67fd43101",
+		"name": "Assessment",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "localhost/assessment/public/v1.0/user/flow/count/weekly",
+			"name": "Login",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"xtowne@yahoo.com\",\n\t\"password\": 12345\n}"
+				},
 				"url": {
-					"raw": "localhost/assessment/public/v1.0/user/flow/count/weekly",
+					"raw": "http://localhost:8000/v1/auth/login",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
+					"port": "8000",
 					"path": [
-						"assessment",
-						"public",
-						"v1.0",
-						"user",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Flow",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsdW1lbi1qd3QiLCJzdWIiOjEsImlhdCI6MTU2MDIxODk2MiwiZXhwIjoxNTYwMjIyNTYyfQ.UjZWeS_8AVJaeuZnjWxgShXFeCWyJfPX0o6RAGGMQms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/v1/user-flow/flow/count/weekly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"user-flow",
 						"flow",
 						"count",
 						"weekly"
