@@ -26,6 +26,7 @@ PHP application to demostrasrate the site user flow in Highcharts chart.
 ## Installation
 
 - Clone the repo to your local machine using `git clone https://github.com/fmr683/gp.git`.
+- Execute the `git checkout master`
 - Navigate to `cd .\gp\assessment\` directory and execute the `composer install`.
 - Start the MYSQL and create the `assessment` database in the MYSQL and make sure DB username is `root` and password is empty and port is `3306` (demo purpose).
 - In the same directory execute the `php artisan migrate --seed` command to migrate and seed the tables and data to database.
